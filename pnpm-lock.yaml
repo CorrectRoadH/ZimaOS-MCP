@@ -11,6 +11,9 @@ importers:
       '@icewhale/icewhale-files-openapi':
         specifier: v1.4.0-alpha28
         version: 1.4.0-alpha28
+      '@icewhale/zimaos-localstorage-openapi':
+        specifier: 1.4.0-alpha6
+        version: 1.4.0-alpha6
       '@icewhale/zimaos-search-openapi':
         specifier: ^1.3.3-alpha3
         version: 1.3.3-alpha7
@@ -194,6 +197,9 @@ packages:
 
   '@icewhale/icewhale-files-openapi@1.4.0-alpha28':
     resolution: {integrity: sha512-hEncNq0WCsfAv5tJEToCoNCPbC6NWxDl5FzWkPuDpTkEbluRdbuto05z01I9iry47ZsiQVTouYlpLXVV3/FOuQ==}
+
+  '@icewhale/zimaos-localstorage-openapi@1.4.0-alpha6':
+    resolution: {integrity: sha512-7r+risugiENbmWdKJzTgkikWisfWVG2Wex1bqiDJscB23LzHxVdhpk1RdSkcM3WZPbSEhiuwu5gy5hvn1erVHA==}
 
   '@icewhale/zimaos-search-openapi@1.3.3-alpha7':
     resolution: {integrity: sha512-LUCJtqSq+Aul1l1E1NjDjgWAyx/brQp4ppA08KQhuX99Cqwny/SFY2IQdRJOnWOnDlFvsVeFIEoc615eP8zAAg==}
@@ -1052,6 +1058,12 @@ snapshots:
     optional: true
 
   '@icewhale/icewhale-files-openapi@1.4.0-alpha28':
+    dependencies:
+      axios: 1.8.4
+    transitivePeerDependencies:
+      - debug
+
+  '@icewhale/zimaos-localstorage-openapi@1.4.0-alpha6':
     dependencies:
       axios: 1.8.4
     transitivePeerDependencies:

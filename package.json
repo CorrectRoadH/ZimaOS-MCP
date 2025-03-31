@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "@icewhale/icewhale-files-openapi": "v1.4.0-alpha28",
+    "@icewhale/zimaos-localstorage-openapi": "1.4.0-alpha6",
     "@icewhale/zimaos-search-openapi": "^1.3.3-alpha3",
     "axios": "^1.6.8",
     "mcp-framework": "^0.2.11",
