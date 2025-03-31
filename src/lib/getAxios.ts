@@ -1,4 +1,4 @@
-import { Configuration,FileApi, FolderApi } from "@icewhale/icewhale-files-openapi"
+import { Configuration,FileApi, FolderApi, WebApi } from "@icewhale/icewhale-files-openapi"
 import { StorageMethodsApi } from '@icewhale/zimaos-localstorage-openapi'
 
 import axios from "axios"
@@ -24,6 +24,21 @@ export function FileAPI(){
     const api = new FileApi(config, '/v2/files/', req)
     return api
 }
+
+export function FileWebAPI(){
+  const { host, token } = getHostAndToken()
+  const req = axios.create({
+      baseURL: `${host}/v2_1/files`,
+      headers: {
+        'Authorization': token
+      }
+    })
+
+  const config = new Configuration({})
+  const api = new WebApi(config, '/v2/files/', req)
+  return api
+}
+
 
 export function FolderAPI(){
   const { host, token } = getHostAndToken()
@@ -56,7 +71,7 @@ export function SearchAPI(){
 export function StorageAPI(){
   const { host, token } = getHostAndToken()
   const req = axios.create({
-    baseURL: `${host}/v2/storage`,
+    baseURL: `${host}/v2/local_storage`,
     headers: {
       'Authorization': token
     }
