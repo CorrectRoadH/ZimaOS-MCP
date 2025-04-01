@@ -26,7 +26,7 @@ class ReadFile extends MCPTool<GetfilecontentInput> {
       const res = await api.getFileDownload(input.file_path)
       return `${res.data.data}`;
     } catch (error) {
-      return `get file content failed, error info: ${error}`;
+      return `Failed to read resource: ${error}`;
     }
   }
 }
