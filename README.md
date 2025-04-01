@@ -10,7 +10,8 @@ A Model Context Protocol (MCP) server built with mcp-framework.
       "args": ["zimaos-mcp"],
       "env": {
         "ZIMAOS_API_BASE": "http://[your-zimaos-host-ip]",
-        "ZIMAOS_API_TOKEN": "[your zimaos token]"
+        "ZIMAOS_USERNAME": "[your zimaos username]",
+        "ZIMAOS_PASSWORD": "[your zimaos password]"
       }
     }
   }
