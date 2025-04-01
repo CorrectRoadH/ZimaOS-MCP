@@ -21,7 +21,7 @@ export function FileAPI(){
       })
 
     const config = new Configuration({})
-    const api = new FileApi(config, '/v2/files/', req)
+    const api = new FileApi(config, '/v2_1/files/', req)
     return api
 }
 
@@ -35,7 +35,7 @@ export function FileWebAPI(){
     })
 
   const config = new Configuration({})
-  const api = new WebApi(config, '/v2/files/', req)
+  const api = new WebApi(config, '/v2_1/files/', req)
   return api
 }
 
@@ -50,7 +50,7 @@ export function FolderAPI(){
     })
 
   const config = new Configuration({})
-  const api = new FolderApi(config, '/v2/files/', req)
+  const api = new FolderApi(config, '/v2_1/files/', req)
   return api
 }
 
